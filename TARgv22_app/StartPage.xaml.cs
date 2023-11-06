@@ -26,15 +26,27 @@ namespace TARgv22_app
                 BackgroundColor = Color.LightSkyBlue,
             };
 
+            Button boxview_btn = new Button
+            {
+                Text = "Box View",
+                BackgroundColor = Color.LightSkyBlue,
+            };
+
             StackLayout st= new StackLayout 
             { 
-               Children= {Ent_btn, Time_btn}, //vse elementi, kotorije hotim videtj na stranice
+               Children= {Ent_btn, Time_btn, boxview_btn}, //vse elementi, kotorije hotim videtj na stranice
                BackgroundColor= Color.DarkBlue,
             };
 
             Content= st;
             Ent_btn.Clicked += Ent_btn_Clicked;
             Time_btn.Clicked += Time_btn_Clicked;
+            boxview_btn.Clicked += Boxview_btn_Clicked;
+        }
+
+        private async void Boxview_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BoxView_Page());
         }
 
         private async void Time_btn_Clicked(object sender, EventArgs e)

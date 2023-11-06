@@ -16,5 +16,36 @@ namespace TARgv22_app
         {
             InitializeComponent();
         }
+
+        private async void btn_tagasi_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        bool onoff=false;
+
+        private async void ShowTime()
+        {
+            while (onoff)
+            {
+                timer_value.Text = DateTime.Now.ToString("T");
+                await Task.Delay(1000); //kazdij raz budet obnovljatj tekst
+            }
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            if (onoff==true)
+            {
+                onoff=false;
+                timer_start.Text = "Start"; //?
+            }
+            else
+            {
+                onoff= true;
+                ShowTime();
+                timer_start.Text = "Stop"; //?
+            }
+        }
     }
 }
