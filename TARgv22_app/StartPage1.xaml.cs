@@ -12,8 +12,8 @@ namespace TARgv22_app
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage1 : ContentPage
     {
-        List<ContentPage> pages = new List<ContentPage>() { new EntryPage(), new BoxView_Page(), new TimerPage(), new DateTimePage(), new StepperSliderPage()};
-        List<string> teksts = new List<string> { "Ava Entry leht", "Ava BoxView leht", "Ava Timer leht", "Ava DateTime leht" };
+        List<ContentPage> pages = new List<ContentPage>() { new EntryPage(), new BoxView_Page(), new TimerPage(), new DateTimePage(), new StepperSliderPage(), new FrameGridPage(), new ImagePage() };
+        List<string> teksts = new List<string> { "Ava Entry leht", "Ava BoxView leht", "Ava Timer leht", "Ava DateTime leht", "Ava Stepper", "Ava Grid leht", "Ava Image leht" };
         StackLayout st;
         public StartPage1()
         {
